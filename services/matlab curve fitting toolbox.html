@@ -3,17 +3,18 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Archives: 2017/7 | Engineering Group Consultants | 工程咨询组</title>
+  <title>Engineering Group Consultants | 工程咨询组</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Test.Instruments.Signal Processing.Innovation.Software">
+  <meta name="description" content="MATLAB Curve Fitting Toolbox 导入数据 cftool 进入GUI界面进行设置常见名词解释 Custom Equations：用户自定义函数类型   Exponential：指数逼近，有两种类型：aexp(bx) 、 aexp(bx) + cexp(dx)     Fourier:傅里叶逼近，有七种，基本型：a0 + a1cos(xw) + b1sin(xw)    Ga">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Engineering Group Consultants | 工程咨询组">
-<meta property="og:url" content="http://yoursite.com/archives/2017/07/index.html">
+<meta property="og:url" content="http://yoursite.com/services/matlab curve fitting toolbox.html">
 <meta property="og:site_name" content="Engineering Group Consultants | 工程咨询组">
-<meta property="og:description" content="Test.Instruments.Signal Processing.Innovation.Software">
+<meta property="og:description" content="MATLAB Curve Fitting Toolbox 导入数据 cftool 进入GUI界面进行设置常见名词解释 Custom Equations：用户自定义函数类型   Exponential：指数逼近，有两种类型：aexp(bx) 、 aexp(bx) + cexp(dx)     Fourier:傅里叶逼近，有七种，基本型：a0 + a1cos(xw) + b1sin(xw)    Ga">
+<meta property="og:updated_time" content="2016-01-28T12:19:17.965Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Engineering Group Consultants | 工程咨询组">
-<meta name="twitter:description" content="Test.Instruments.Signal Processing.Innovation.Software">
+<meta name="twitter:description" content="MATLAB Curve Fitting Toolbox 导入数据 cftool 进入GUI界面进行设置常见名词解释 Custom Equations：用户自定义函数类型   Exponential：指数逼近，有两种类型：aexp(bx) 、 aexp(bx) + cexp(dx)     Fourier:傅里叶逼近，有七种，基本型：a0 + a1cos(xw) + b1sin(xw)    Ga">
   
     <link rel="alternate" href="/atom.xml" title="Engineering Group Consultants | 工程咨询组" type="application/atom+xml">
   
@@ -80,39 +81,47 @@
 </script>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/07/08/hello-world/" class="archive-article-date">
-  <time datetime="2017-07-07T16:20:16.115Z" itemprop="datePublished">Jul 8</time>
+        <section id="main"><article id="page-undefined" class="article article-type-page" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/services/matlab curve fitting toolbox.html" class="article-date">
+  <time datetime="2017-07-07T16:33:31.389Z" itemprop="datePublished">2017-07-08</time>
 </a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/07/08/hello-world/">Hello World</a>
-    </h1>
-  
-
-    </header>
+    
   </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="MATLAB-Curve-Fitting-Toolbox"><a href="#MATLAB-Curve-Fitting-Toolbox" class="headerlink" title="MATLAB Curve Fitting Toolbox"></a>MATLAB Curve Fitting Toolbox</h1><ul>
+<li>导入数据</li>
+<li>cftool</li>
+<li>进入GUI界面进行设置<h2 id="常见名词解释"><a href="#常见名词解释" class="headerlink" title="常见名词解释"></a>常见名词解释</h2></li>
+<li>Custom Equations：用户自定义函数类型  </li>
+<li>Exponential：指数逼近，有两种类型：a<em>exp(b</em>x) 、 a<em>exp(b</em>x) + c<em>exp(d</em>x)    </li>
+<li>Fourier:傅里叶逼近，有七种，基本型：a0 + a1<em>cos(x</em>w) + b1<em>sin(x</em>w)   </li>
+<li>Gaussian：高斯逼近，8种类型，基础型：   a1*exp(-((x-b1)/c1)^2)     </li>
+<li>Interpolant：插值逼近，四种类型，inear、nearest neighbor、cubic spline、shape-preserving   </li>
+<li>Polynomial：多项式逼近，9种：，linear ~、quadratic ~、cubic ~、4-9th degree ~</li>
+<li>Power：幂逼近，有2种类型，a<em>x^b 、a</em>x^b + c    </li>
+<li>Rational：有理数逼近，分子分母共有类型是：linear ~、quadratic ~、cubic ~、4-5th  </li>
+<li>Smoothing Spline：平滑逼近  </li>
+<li>Sum of sin Functions:正弦线逼近，有8种，基础型是 a1<em>sin(b1</em>x + c1)   </li>
+<li>Weibull:只有一种：a<em>b</em>x^(b-1)<em>exp(-a</em>x^b) <h2 id="非自定义类型"><a href="#非自定义类型" class="headerlink" title="非自定义类型"></a>非自定义类型</h2>设置好上面内容后，电机Fit options，设置拟合算法、设置带估计参数上下限制。<h2 id="自定义类型"><a href="#自定义类型" class="headerlink" title="自定义类型"></a>自定义类型</h2>如果选Custon Equations，在相应对话框输入函数类型，例如：y=a<em>x</em>x+b*x,设置参数上下限，确定。</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/services/matlab curve fitting toolbox.html" data-id="cj4u3dgcs0003t4euav4ldiwp" class="article-share-link">Partager</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+  
 </article>
-  
-  
-    </div></section>
-  
 
 </section>
         
