@@ -3,17 +3,24 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Engineering Group Consultants | 工程咨询组</title>
+  <title>常用传感器驱动 | Engineering Group Consultants | 工程咨询组</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Test.Instruments.Signal Processing.Innovation.Software">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Engineering Group Consultants | 工程咨询组">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="针对目前广泛使用的MPU6050陀螺仪模块，开发了LabVIEW驱动程序，通过串口接收数据并对其进行解析，可获得其角度、加速度、温度等数据。使用时直接添加VI即可。驱动读取速度快，占用系统资源少，并附带三维模型显示例程。(其它支持串口、I2C、SPI输出的传感器可以进行定制，如超声波测距模块，烟雾气敏传感器，称重模块，GPS模块，PM2.5传感器模块等都可开发驱动程序及上位机)">
+<meta property="og:type" content="article">
+<meta property="og:title" content="常用传感器驱动">
+<meta property="og:url" content="http://yoursite.com/2015/06/25/常用传感器驱动/index.html">
 <meta property="og:site_name" content="Engineering Group Consultants | 工程咨询组">
-<meta property="og:description" content="Test.Instruments.Signal Processing.Innovation.Software">
+<meta property="og:description" content="针对目前广泛使用的MPU6050陀螺仪模块，开发了LabVIEW驱动程序，通过串口接收数据并对其进行解析，可获得其角度、加速度、温度等数据。使用时直接添加VI即可。驱动读取速度快，占用系统资源少，并附带三维模型显示例程。(其它支持串口、I2C、SPI输出的传感器可以进行定制，如超声波测距模块，烟雾气敏传感器，称重模块，GPS模块，PM2.5传感器模块等都可开发驱动程序及上位机)">
+<meta property="og:image" content="http://osrv3eyjt.bkt.clouddn.com/%E9%99%80%E8%9E%BA%E4%BB%AA%E6%A8%A1%E5%9D%971.png?imageView/2/w/700/q/90">
+<meta property="og:image" content="http://osrv3eyjt.bkt.clouddn.com/%E6%B5%8B%E8%B7%9D%E6%A8%A1%E5%9D%97.png?imageView/2/w/700/q/90">
+<meta property="og:image" content="http://osrv3eyjt.bkt.clouddn.com/%E7%83%9F%E9%9B%BE%E6%B0%94%E6%95%8F%E4%BC%A0%E6%84%9F%E5%99%A8.jpg?imageView/2/w/700/q/90">
+<meta property="og:image" content="http://osrv3eyjt.bkt.clouddn.com/%E7%A7%B0%E9%87%8D%E6%A8%A1%E5%9D%97.jpg?imageView/2/w/700/q/90">
+<meta property="og:image" content="http://osrv3eyjt.bkt.clouddn.com/GPS%E6%A8%A1%E5%9D%97.jpg?imageView/2/w/700/q/90">
+<meta property="og:updated_time" content="2017-07-20T14:21:02.206Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Engineering Group Consultants | 工程咨询组">
-<meta name="twitter:description" content="Test.Instruments.Signal Processing.Innovation.Software">
+<meta name="twitter:title" content="常用传感器驱动">
+<meta name="twitter:description" content="针对目前广泛使用的MPU6050陀螺仪模块，开发了LabVIEW驱动程序，通过串口接收数据并对其进行解析，可获得其角度、加速度、温度等数据。使用时直接添加VI即可。驱动读取速度快，占用系统资源少，并附带三维模型显示例程。(其它支持串口、I2C、SPI输出的传感器可以进行定制，如超声波测距模块，烟雾气敏传感器，称重模块，GPS模块，PM2.5传感器模块等都可开发驱动程序及上位机)">
+<meta name="twitter:image" content="http://osrv3eyjt.bkt.clouddn.com/%E9%99%80%E8%9E%BA%E4%BB%AA%E6%A8%A1%E5%9D%971.png?imageView/2/w/700/q/90">
   
     <link rel="alternate" href="/atom.xml" title="Engineering Group Consultants | 工程咨询组" type="application/atom+xml">
   
@@ -80,87 +87,7 @@
 </script>
 </header>
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-LV构架V1" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/07/09/LV构架V1/" class="article-date">
-  <time datetime="2017-07-09T10:55:43.056Z" itemprop="datePublished">2017-07-09</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <hr>
-<p>title: LV构架V1<br>date: 2015-6-23 22:29:11</p>
-<h2 id="tags"><a href="#tags" class="headerlink" title="tags:"></a>tags:</h2><p>软件架构是编程的起点。好的架构具有以下优点：  </p>
-<ul>
-<li>便于团队成员阅读，统一团队编程风格</li>
-<li>提高代码复用级别，缩短软件生命周期</li>
-<li>经过验证的架构便于发现问题，可靠性高</li>
-<li>便于实现模块化编程，实现高内聚，低耦合</li>
-<li>减少重复劳动</li>
-<li>扩展性强，接口规范，减少软件后期维护成本</li>
-<li><strong>……..</strong>
-        
-          <p class="article-more-link">
-            <a href="/2017/07/09/LV构架V1/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/07/09/LV构架V1/" data-id="cj5cizxht0000o0eutfi82naj" class="article-share-link">Delen</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Links" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2015/12/23/Links/" class="article-date">
-  <time datetime="2015-12-23T14:29:11.000Z" itemprop="datePublished">2015-12-23</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/12/23/Links/">Links</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><a href="https://engineeringgroup.github.io/services/" target="_blank" rel="external">Services|服务</a><br><a href="https://engineeringgroup.github.io/products/" target="_blank" rel="external">Products|产品</a><br><a href="https://engineeringgroup.github.io/about/" target="_blank" rel="external">About|关于EG</a><br><a href="https://engineeringgroup.github.io/contact/" target="_blank" rel="external">Contact|联系</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/12/23/Links/" data-id="cj5cizxis0001o0euqet0lgb0" class="article-share-link">Delen</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-常用传感器驱动" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-常用传感器驱动" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2015/06/25/常用传感器驱动/" class="article-date">
   <time datetime="2015-06-25T14:29:11.000Z" itemprop="datePublished">2015-06-25</time>
@@ -173,8 +100,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/06/25/常用传感器驱动/">常用传感器驱动</a>
+    <h1 class="article-title" itemprop="name">
+      常用传感器驱动
     </h1>
   
 
@@ -183,11 +110,18 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>针对目前广泛使用的MPU6050陀螺仪模块，开发了LabVIEW驱动程序，通过串口接收数据并对其进行解析，可获得其角度、加速度、温度等数据。使用时直接添加VI即可。驱动读取速度快，占用系统资源少，并附带三维模型显示例程。(其它支持串口、I2C、SPI输出的传感器可以进行定制，如超声波测距模块，烟雾气敏传感器，称重模块，GPS模块，PM2.5传感器模块等都可开发驱动程序及上位机)  </p>
-        
-          <p class="article-more-link">
-            <a href="/2015/06/25/常用传感器驱动/#more">Read More</a>
-          </p>
-        
+<a id="more"></a> 
+<p><strong>陀螺仪模块</strong>  </p>
+<p><img src="http://osrv3eyjt.bkt.clouddn.com/%E9%99%80%E8%9E%BA%E4%BB%AA%E6%A8%A1%E5%9D%971.png?imageView/2/w/700/q/90" alt="陀螺仪模块">   </p>
+<p><strong>超声波传感器</strong>  </p>
+<p><img src="http://osrv3eyjt.bkt.clouddn.com/%E6%B5%8B%E8%B7%9D%E6%A8%A1%E5%9D%97.png?imageView/2/w/700/q/90" alt="超声波传感器"> </p>
+<p><strong>烟雾气敏传感器</strong>  </p>
+<p><img src="http://osrv3eyjt.bkt.clouddn.com/%E7%83%9F%E9%9B%BE%E6%B0%94%E6%95%8F%E4%BC%A0%E6%84%9F%E5%99%A8.jpg?imageView/2/w/700/q/90" alt="气体模块"> </p>
+<p><strong>称重模块</strong>  </p>
+<p><img src="http://osrv3eyjt.bkt.clouddn.com/%E7%A7%B0%E9%87%8D%E6%A8%A1%E5%9D%97.jpg?imageView/2/w/700/q/90" alt="称重模块"> </p>
+<p><strong>GPS模块</strong>  </p>
+<p><img src="http://osrv3eyjt.bkt.clouddn.com/GPS%E6%A8%A1%E5%9D%97.jpg?imageView/2/w/700/q/90" alt="GPS模块"> </p>
+
       
     </div>
     <footer class="article-footer">
@@ -197,51 +131,28 @@
     </footer>
   </div>
   
-</article>
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-NI系列培训" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2015/06/24/NI系列培训/" class="article-date">
-  <time datetime="2015-06-24T14:29:11.000Z" itemprop="datePublished">2015-06-24</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
+    <a href="/2015/12/23/Links/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Nieuwer</strong>
+      <div class="article-nav-title">
         
+          Links
+        
+      </div>
+    </a>
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/06/24/NI系列培训/">NI系列培训</a>
-    </h1>
   
+    <a href="/2015/06/24/NI系列培训/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Ouder</strong>
+      <div class="article-nav-title">NI系列培训</div>
+    </a>
+  
+</nav>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>NI LabVIEW作为图形化编程语言的杰出代表，被广泛应用于各种复杂工程中，用于加速产品开发，提高生产效率。而<a href="http://sine.ni.com/tacs/app/fp/p/ap/ov/lang/zhs/pg/1/" target="_blank" rel="external">NI公司系列课程</a>无疑是掌握该项技能的最理想教材,忧与市场上任何书籍。通过专门培训可将<a href="http://sine.ni.com/tacs/app/main/p/ap/ov/lang/zhs/fmid/663/" target="_blank" rel="external">学习速度提高66%，开发速度提高50%，并节省43%的后期维护时间</a>。以最少的成本获得最大的收益。Engineering Group在原有NI系列课程基础上做出一定更新，以期使课程更加实用，易于掌握。目前我们提供以下几种形式培训。<br>
-        
-          <p class="article-more-link">
-            <a href="/2015/06/24/NI系列培训/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/06/24/NI系列培训/" data-id="cj5cizxj00003o0eut0oypeqp" class="article-share-link">Delen</a>
-      
-      
-    </footer>
-  </div>
   
 </article>
-
-
-  
 
 </section>
         
